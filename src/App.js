@@ -1,8 +1,9 @@
-import { WeatherDashborad } from "./WeatherDashborad";
+import { WeatherDashboard } from "./Components/WeatherDashborad";
+
 const App = () => {
 return(
   <>
-  <WeatherDashborad/>
+  <WeatherDashboard/>
   </>
 )
 };

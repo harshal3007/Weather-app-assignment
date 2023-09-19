@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const apiKey = 'YOUR_API_KEY';
+const APIkey = `065d067d498ed087648453e53ec580a1`;
 
-const WeatherService = {
+const WeatherData = {
   getCurrentWeather: async (location) => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIkey}`;
     try {
       const response = await axios.get(url);
       return response.data;
@@ -13,7 +13,7 @@ const WeatherService = {
     }
   },
   getThreeDayForecast: async (location) => {
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${APIkey}`;
     try {
       const response = await axios.get(url);
       return response.data;
@@ -23,4 +23,4 @@ const WeatherService = {
   }
 };
 
-export default WeatherService;
+export default WeatherData;
