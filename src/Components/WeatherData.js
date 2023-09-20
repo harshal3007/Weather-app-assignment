@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const APIkey = `065d067d498ed087648453e53ec580a1`;
+const APIkey = `YOUR_API_KEY`;
 
 const WeatherData = {
   getCurrentWeather: async (location) => {
@@ -9,7 +9,7 @@ const WeatherData = {
       const response = await axios.get(url);
       return response.data;
     } catch (error) {
-      throw new Error('Error fetching current weather.');
+      throw new Error('Error fetching current weather, please try another location.');
     }
   },
   getThreeDayForecast: async (location) => {
